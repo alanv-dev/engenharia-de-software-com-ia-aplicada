@@ -19,7 +19,7 @@
   "license": "MIT",
   "type": "module",
   "engines": {
-    "node": "v20.11.0"
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "fastify": "^4.26.1",
