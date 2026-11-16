@@ -46,8 +46,8 @@ Em algumas distribuições do **Windows** ou em certos processadores, os binári
 
 Exemplos afetados:
 
-- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/) (`@tensorflow/tfjs-node`)
-- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/) (`@tensorflow/tfjs-node`)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/) (`@tensorflow/tfjs`)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/) (`@tensorflow/tfjs`)
 - [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-08-context7/nextjs-better-auth-demo/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-08-context7/nextjs-better-auth-demo/) (`better-sqlite3`)
 - [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/) (`@huggingface/transformers`, `@xenova/transformers`)
 - [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/) (`@huggingface/transformers`, `@xenova/transformers`)
@@ -279,8 +279,8 @@ Cada célula preenchida indica o padrão presente naquele diretório.
 
 | Diretório                                                        | Var. inline             | Aspas `'`                                | Unix commands | Glob `**`  | `&&` (PS 5.1)                 | Dep. nativa             |
 | ---------------------------------------------------------------- | :---------------------- | :--------------------------------------- | :------------ | :--------- | :---------------------------- | :---------------------- |
-| `modulo01/exemplo-00-template`                                   |                         |                                          |               |            | `echo && exit`                | `tfjs-node`             |
-| `modulo01/exemplo-00-z`                                          |                         |                                          |               |            | `echo && exit`                | `tfjs-node`             |
+| `modulo01/exemplo-00-template`                                   |                         |                                          |               |            | `echo && exit`                |                         |
+| `modulo01/exemplo-00-z`                                          |                         |                                          |               |            | `echo && exit`                |                         |
 | `modulo01/exemplo-01-ecommerce-recomendations-template`          |                         | `--files '...'`                          |               |            | `echo && exit`                |                         |
 | `modulo01/exemplo-01-...-z/parte01-...`                          |                         | `--files '...'`                          |               |            | `echo && exit`                |                         |
 | `modulo01/exemplo-01-...-z/parte02-...`                          |                         | `--files '...'`                          |               |            | `echo && exit`                |                         |

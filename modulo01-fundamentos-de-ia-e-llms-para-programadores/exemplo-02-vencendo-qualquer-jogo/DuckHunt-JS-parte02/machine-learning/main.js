@@ -4,7 +4,7 @@ export default async function main(game) {
     const container = buildLayout(game.app);
     const worker = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
 
-    game.stage.aim.visible = false;
+    let isProcessing = false;
 
     worker.onmessage = ({ data }) => {
         const { type, x, y } = data;
@@ -23,12 +23,18 @@ export default async function main(game) {
 
         }
 
+        // Libera para enviar o próximo frame após resposta do worker
+        isProcessing = false;
     };
 
     setInterval(async () => {
+        // Evita sobrecarga/backpressure: só envia novo frame se o anterior terminou
+        if (isProcessing) return;
+
         const canvas = game.app.renderer.extract.canvas(game.stage);
         const bitmap = await createImageBitmap(canvas);
 
+        isProcessing = true;
         worker.postMessage({
             type: 'predict',
             image: bitmap,
