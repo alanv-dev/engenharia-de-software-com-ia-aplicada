@@ -46,8 +46,9 @@ function preprocessImage(input) {
 async function runInference(tensor) {
     const output = await _model.executeAsync(tensor)
     tf.dispose(tensor)
-    // Assume que as 3 primeiras saídas são:
-    // caixas (boxes), pontuações (scores) e classes
+    // Este modelo exportado deve fornecer boxes, scores e classes nas três
+    // primeiras saídas. A ordem e o formato dependem da conversão; confira os
+    // nomes e shapes em _model.outputs ao trocar o modelo.
 
     const [boxes, scores, classes] = output.slice(0, 3)
     const [boxesData, scoresData, classesData] = await Promise.all(

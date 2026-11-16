@@ -66,8 +66,8 @@ This is only useful when the package itself follows that publishing convention (
 
 ## Affected directories
 
-- `modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/` (`@tensorflow/tfjs-node`)
-- `modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/` (`@tensorflow/tfjs-node`)
+- `modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/` (`@tensorflow/tfjs`)
+- `modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/` (`@tensorflow/tfjs`)
 - `modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-08-context7/nextjs-better-auth-demo/` (`better-sqlite3`)
 - `modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/` (`@huggingface/transformers`, `@xenova/transformers`)
 - `modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/` (`@huggingface/transformers`, `@xenova/transformers`)

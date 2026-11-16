@@ -82,6 +82,10 @@ export class View {
 
     handleFilePreview(event) {
         const file = event.target.files[0];
+        if (this.currentBlobUrl) {
+            URL.revokeObjectURL(this.currentBlobUrl);
+            this.currentBlobUrl = null;
+        }
         this.elements.filePreview.innerHTML = '';
         this.elements.fileSelectedName.textContent = '';
 
@@ -95,14 +99,15 @@ export class View {
         const fileInfo = document.createElement('div');
         fileInfo.className = 'file-info';
 
+        this.currentBlobUrl = URL.createObjectURL(file);
         if (fileType === 'image') {
             const img = document.createElement('img');
-            img.src = URL.createObjectURL(file);
+            img.src = this.currentBlobUrl;
             img.className = 'preview-image';
             fileInfo.appendChild(img);
         } else if (fileType === 'audio') {
             const audio = document.createElement('audio');
-            audio.src = URL.createObjectURL(file);
+            audio.src = this.currentBlobUrl;
             audio.controls = true;
             audio.className = 'preview-audio';
             fileInfo.appendChild(audio);
@@ -113,6 +118,10 @@ export class View {
         removeBtn.className = 'remove-file-btn';
         removeBtn.textContent = '× Remover arquivo';
         removeBtn.onclick = () => {
+            if (this.currentBlobUrl) {
+                URL.revokeObjectURL(this.currentBlobUrl);
+                this.currentBlobUrl = null;
+            }
             this.elements.fileInput.value = '';
             this.elements.filePreview.innerHTML = '';
             this.elements.fileSelectedName.textContent = '';
